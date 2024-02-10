@@ -1,0 +1,187 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* altura da viewport */
+  background-image: url(images/ceu_estrelado.jpeg);
+  background-color: cover;
+  overflow: hidden;
+}
+
+.sol {
+  position: relative;
+  width: 6vw; /* largura relativa à largura da viewport */
+  height: 6vw; /* altura relativa à largura da viewport */
+  background-image: url('images/sol.jpg');
+  background-size: cover;
+  border-radius: 50%;
+  margin: 1vw auto; /* margem relativa à largura da viewport */
+  animation: brilho 3s linear infinite alternate, rotate 50s linear infinite;
+
+}
+@keyframes brilho{
+    0% {
+        box-shadow: 0 0 300px 50px rgba(255, 153, 0, 0.5), inset -10px -10px 15px #ff7300, inset 3px 3px 5px #ffa578; /* Sombra inicial */
+      }
+      50% {
+        box-shadow: 0 0 300px 40px rgba(255, 181, 77, 0.826), inset 3px 3px 5px #ffa578; /* Sombra máxima */
+      }
+      100% {
+        box-shadow: 0 0 300px 50px rgba(255, 196, 0, 0.5), inset 10px 10px 15px #ff9100, inset 3px 3px 5px #ffa578;
+      }
+  }
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.planeta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  box-shadow: inset -0.1vw -0.1vw 0.5vw #000000;
+
+
+}
+
+.mercurio {
+  background-image: url('images/mercurio.jpeg');
+  background-size: cover;
+  width: 1vw; /* largura relativa à largura da viewport */
+  height: 1vw; /* altura relativa à largura da viewport */
+  animation: orbit-mercurio 12s linear infinite;
+}
+
+@keyframes orbit-mercurio {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(5vw) rotate(0deg); /* valores relativos à largura da viewport */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(5vw) rotate(360deg);
+  }
+}
+
+.venus {
+  background-image: url('images/venus.jpeg');
+  background-size: cover;
+  width: 2vw;
+  height: 2vw;
+  animation: orbit-venus 28s linear infinite;
+}
+
+@keyframes orbit-venus {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(8vw) rotate(0deg); /* valores relativos à largura da viewport */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(8vw) rotate(360deg);
+  }
+}
+
+.terra {
+  background-image: url('images/terra.jpeg');
+  background-size: cover;
+  width: 2vw;
+  height: 2vw;
+  animation: orbit-terra 13s linear infinite;
+}
+
+@keyframes orbit-terra {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(11vw) rotate(0deg); /* valores relativos à largura da viewport */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(11vw) rotate(360deg);
+  }
+}
+
+.marte {
+  background-image: url('images/marte.jpg');
+  background-size: cover;
+  width: 1.5vw;
+  height: 1.5vw;
+  animation: orbit-marte 21s linear infinite;
+}
+
+@keyframes orbit-marte {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(14vw) rotate(0deg) ; /* valores relativos à largura da viewport */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(14vw) rotate(360deg);
+  }
+}
+
+.jupiter {
+  background-image: url('images/jupiter.jpg');
+  background-size: cover;
+  width: 3vw;
+  height: 3vw;
+  animation: orbit-jupiter 13.9s linear infinite;
+}
+
+@keyframes orbit-jupiter {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(17vw) rotate(0deg); /* valores relativos à largura da viewport */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(17vw) rotate(360deg);
+  }
+}
+
+.saturno {
+  background-image: url('images/saturno.jpg');
+  background-size: cover;
+  width: 2.5vw;
+  height: 2.5vw;
+  animation: orbit-saturno 31.5s linear infinite;
+}
+
+@keyframes orbit-saturno {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(20vw) rotate(0deg); /* valores relativos à largura da viewport */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(20vw) rotate(360deg);
+  }
+}
+
+.urano {
+  background-image: url('images/urano.jpg');
+  background-size: cover;
+  width: 2.5vw;
+  height: 2.5vw;
+  animation: orbit-urano 46.1s linear infinite;
+}
+
+@keyframes orbit-urano {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(23vw) rotate(0deg); /* valores relativos à largura da viewport */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(23vw) rotate(360deg);
+  }
+}
+
+.netuno {
+  background-image: url('images/netuno.jpg');
+  background-size: cover;
+  width: 2vw;
+  height: 2vw;
+  animation: orbit-netuno 124.15s linear infinite;
+}
+
+@keyframes orbit-netuno {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(26vw) rotate(0deg); /* valores relativos à largura da viewport */
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(26vw) rotate(360deg);
+  }
+}
